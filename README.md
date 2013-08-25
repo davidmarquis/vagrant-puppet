@@ -2,7 +2,7 @@
 
 a.k.a. Awesomeness in a box
 
-This repo allows testing of our Puppet manifests and modules in a fully isolated local environment managed
+This repo allows testing of your Puppet manifests and modules in a fully isolated local environment managed
 by [Vagrant](http://www.vagrantup.com/). The setup covers general Puppet best practices such as externalizing
 your environment data into Hiera. A sample fileserver is also setup if you need it.
 
