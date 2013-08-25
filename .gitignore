@@ -1,0 +1,4 @@
+puppet/modules/
+.vagrant/
+*.ipr
+*.iml

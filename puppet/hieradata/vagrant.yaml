@@ -1,0 +1,10 @@
+# This is the configuration specific for the box with host name "vagrant".
+# If you are managing/testing multiple servers, play with the Vagrant hostname in Vagrantfile to switch between servers.
+---
+classes:
+  - mysql::server
+
+mysql::server:config_hash:
+  bind_address: 0.0.0.0
+  character_set: utf8
+  root_password: anypass!
