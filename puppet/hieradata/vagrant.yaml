@@ -4,7 +4,7 @@
 classes:
   - mysql::server
 
-mysql::server:config_hash:
+mysql::server::config_hash:
   bind_address: 0.0.0.0
   character_set: utf8
   root_password: anypass!
