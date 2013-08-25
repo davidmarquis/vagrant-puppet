@@ -44,8 +44,6 @@ By making all your changes in specific Git branches, you can safely test those c
 promote them to production by merging to `master` when ready. Then on your Puppetmaster, `git pull` to get the latest
 (and, more importantly, tested!) code.
 
-Make all your changes in specific working branches, test those changes locally using Vagrant, then merge those changes to master
-
 ### Testing multiple servers
 
 In this project, Hiera is configured to use the box's host name as a way of selecting the right YAML files to use. This is
