@@ -6,8 +6,8 @@ This repo allows testing of our Puppet manifests and modules in a fully isolated
 by [Vagrant](http://www.vagrantup.com/). The setup covers general Puppet best practices such as externalizing
 your environment data into Hiera. A sample fileserver is also setup if you need it.
 
-The configuration bundled in this example setup will install and configure a base MySQL server on your Vagrant virtual
-machine. You will obviously change this to whatever your needs are.
+The configuration bundled in this sample setup will install and configure a base MySQL server on your Vagrant virtual
+machine. This is here for demonstration purposes only; you will obviously change this to whatever your needs are.
 
 ## How to use?
 
