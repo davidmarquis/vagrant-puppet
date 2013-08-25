@@ -9,6 +9,8 @@ your environment data into Hiera. A sample fileserver is also setup if you need 
 The configuration bundled in this sample setup will install and configure a base MySQL server on your Vagrant virtual
 machine. This is here for demonstration purposes only; you will obviously change this to whatever your needs are.
 
+As with any great things in life, please enjoy responsibly!
+
 ## How to use?
 
 ### Dependencies
@@ -50,5 +52,3 @@ In this project, Hiera is configured to use the box's host name as a way of sele
 a good practice to follow as it allows for much easier node configuration. Setting it up this way also allows you to select
 the box you want to test by simply changing Vagrant's `config.vm.hostname` configuration in `Vagrantfile`.
 
-
-Enjoy!
