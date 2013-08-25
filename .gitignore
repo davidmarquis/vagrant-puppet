@@ -1,4 +1,7 @@
-puppet/modules/
+modules/
+.librarian/
+.tmp/
+Puppetfile.lock
 .vagrant/
 *.ipr
 *.iml
