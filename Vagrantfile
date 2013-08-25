@@ -19,7 +19,9 @@ Vagrant.configure("2") do |config|
   # doesn't already exist on the user's system.
   config.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130309.box"
 
-  #config.vm.network :forwarded_port, guest: 80, host: 8080
+  # This sample sets up MySQL on your box, so we'll setup port forwards for MySQL.
+  # Change this to whatever your needs are.
+  config.vm.network :forwarded_port, guest: 3306, host: 3306
 
   config.vm.provision :puppet do |puppet|
     puppet.module_path = "puppet/modules"

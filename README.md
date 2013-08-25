@@ -1,4 +1,4 @@
-# Testing environment for Puppet using Vagrant
+# Fully functional Puppet testing environment using Vagrant
 
 a.k.a. Awesomeness in a box
 
@@ -6,10 +6,8 @@ This repo allows testing of our Puppet manifests and modules in a fully isolated
 by [Vagrant](http://www.vagrantup.com/). The setup covers general Puppet best practices such as externalizing
 your environment data into Hiera. A sample fileserver is also setup if you need it.
 
-Another best practice you'd generally follow is have everything in the `/puppet` directory be its own Git repo.
-Then on your production Puppetmaster, you'd clone this repository into `/etc/puppet/...` and use it as your production
-manifests and modules. By playing with Git branches, you can safely test changes to your Puppet code using Vagrant, then
-promote those changes to production by merging with `master` when ready.
+The configuration bundled in this example setup will install and configure a base MySQL server on your Vagrant virtual
+machine. You will obviously change this to whatever your needs are.
 
 ## How to use?
 
@@ -24,9 +22,34 @@ promote those changes to production by merging with `master` when ready.
 
 ### Starting your first VM
 
+Please note that this sample environment uses CentOS 6.4 as a base Vagrant box. You can use whichever you need by changing
+it in `Vagrantfile`.
+
 - Run `vagrant up` to startup your VM. On the first run, it'll download the box image file so prepare to wait a bit.
 - Once a box is started, you may just run `vagrant provision` to re-run Puppet on the host
 - To re-create your VM from scratch, run `vagrant destroy` followed by `vagrant up`
+
+## Best practices
+
+### Version control your Puppet manifests
+
+The `/puppet` directory that's included in this repository is included for simplicity of kickstarting the project on your
+computer. What you'd generally do is have everything under the `/puppet` directory be its own Git repo, and clone that
+repository into the `/puppet` directory here.
+
+Then on your production Puppetmaster, you would use this repository's `master` branch as your production Puppet manifests
+ and modules.
+
+By making all your changes in specific Git branches, you can safely test those changes using Vagrant, then
+promote them to production by merging to `master` when ready. Then on your Puppetmaster, `git pull` to get the latest (tested) code.
+
+Make all your changes in specific working branches, test those changes locally using Vagrant, then merge those changes to master
+
+### Testing multiple servers
+
+In this project, Hiera is configured to use the box's host name as a way of selecting the right YAML files to use. This is
+a good practice to follow as it allows for much easier node configuration. Setting it up this way also allows you to select
+the box you want to test by simply changing Vagrant's `config.vm.hostname` configuration in `Vagrantfile`.
 
 
 Enjoy!
