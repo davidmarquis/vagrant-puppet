@@ -18,7 +18,9 @@ As with any great things in life, please enjoy responsibly!
 1. Install [Vagrant](http://www.vagrantup.com/)
 1. Optionally, install VirtualBox (to manage Vagrant boxes or otherwise just see them)
 1. Install [Puppet 3.x](http://docs.puppetlabs.com/guides/installation.html)
-1. Install [librarian-puppet](https://github.com/rodjek/librarian-puppet)
+1. Install [librarian-puppet](https://rubygems.org/gems/librarian-puppet-maestrodev)
+   I strongly suggest installing the `maestrodev` fork of librarian-puppet because it seems to fix a few module
+   versions issues compared to the original.
 1. On the command line, navigate to the "puppet" directory (`cd puppet`)
 1. Run `librarian-puppet install` to install all Puppet module dependencies
 
